@@ -65,7 +65,7 @@ class StepTracker: ObservableObject {
     
     // Set daily step goal
     func setDailyGoal(_ goal: Int) {
-        dailyGoal = max(1000, goal) // Minimum 1000 steps
+        dailyGoal = max(2000, goal) // Minimum 1000 steps
     }
     
     // Calculate progress percentage
