@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var stepTracker = StepTracker()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            StepProgressView(stepTracker: stepTracker)
+                .navigationTitle("Step Tracker")
+                .navigationBarTitleDisplayMode(.large)
         }
-        .padding()
     }
 }
 
